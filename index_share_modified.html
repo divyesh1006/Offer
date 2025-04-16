@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cyber Scam Awareness Drill</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fefefe;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+    }
+    input, button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .social-icons {
+      margin: 20px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    .social-icons button {
+      width: 23%;
+      background-color: #eee;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: red;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Enter Your Details to Proceed</h2>
+
+  <form id="scamForm">
+    <input type="text" placeholder="Full Name" required>
+    <input type="number" placeholder="Age" required>
+    <input type="date" placeholder="Date of Birth" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <input type="text" placeholder="Occupation" required>
+    <input type="text" placeholder="Address" required>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Password" required>
+
+    <div class="social-icons">
+      <a href="https://api.whatsapp.com/send?text=Check%20this%20out!" target="_blank" style="width: 23%;">
+        <button type="button" style="width: 100%;">📱 WhatsApp</button>
+      </a>
+      <a href="https://www.instagram.com/yourusername" target="_blank" style="width: 23%;">
+        <button type="button" style="width: 100%;">📸 Instagram</button>
+      </a>
+      <a href="https://t.me/yourusername" target="_blank" style="width: 23%;">
+        <button type="button" style="width: 100%;">📨 Telegram</button>
+      </a>
+      <a href="mailto:?subject=Check this out!&body=Hey, check out this link: https://yourlinkhere.com" style="width: 23%;">
+        <button type="button" style="width: 100%;">✉️ Email</button>
+      </a>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    document.getElementById("scamForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("result").innerHTML = 
+        "⚠️ YOU HAVE BEEN SCAMMED ⚠️<br>This is just a mock drill. Please don't enter your personal details without verification!";
+    });
+  </script>
+
+</body>
+</html>
